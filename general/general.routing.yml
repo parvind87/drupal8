@@ -1,0 +1,15 @@
+general.homepage:
+  path: '/homepage'
+  defaults:
+    _controller: '\Drupal\general\Controller\GeneralController::home_page'
+    _title: 'Custom Home Page '
+  requirements:
+    _permission: 'Administer blocks'
+
+general.homepagea:
+  path: '/homepage/{first}'
+  defaults:
+    _controller: '\Drupal\general\Controller\GeneralController::home_page_args'
+    _title: 'Custom Home Page '
+  requirements:
+    _permission: 'Administer blocks'
