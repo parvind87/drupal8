@@ -3,3 +3,4 @@
 3. Creating a page with Arguements
 4. Getting the current path (unaliased path)
 5. Getting the current page uri (Aliased Path)
+6. Implementation of hook_form_alter
