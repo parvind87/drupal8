@@ -19,9 +19,31 @@ class GeneralUppercaseBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    return [
-      '#markup' => $this->t("This block's title is changed to uppercase. Any block title which contains 'uppercase' will also be changed to uppercase."),
-    ];
+	$result = db_select('node', 'n')
+	->fields('n', array(
+	'nid',
+	))
+	->orderBy('n.nid', 'DESC')
+	->range(0, 10)
+	->execute()->fetchAll();
+	//$record = $result;
+	//print_r($record);exit; // // ->condition('n.uid', $uid)
+
+$build['article_list'] = array(
+          '#theme' => 'articles',
+          '#items' => $result,
+          //'#pager' => $pager,
+          //'#sorting' => $sorting_html,
+          //'#tabs_html' => $tabs_html,
+          //'#wrap_prefix' => $wrap_prefix,
+          //'#wrap_suffix' => $wrap_suffix,
+          '#no_records_text' => 'No records found for your search',
+          //'#cache' => array('max-age' => 0),
+      );
+return $build;
+  /*  return [
+      '#markup' => $this->t("Data."),
+    ];*/
   }
 
 }

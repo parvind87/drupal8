@@ -4,6 +4,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Serialization\Json;
 /**
  * Implements hook_form_alter().
  */
@@ -27,4 +28,15 @@ function general_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id === 'node_article_form') {
     $form['title']['widget'][0]['value']['#title'] = t('Artwork Title');
   }
+}
+
+
+
+function general_theme($existing, $type, $theme, $path) {
+  return array(
+    'articles' => array(
+      'variables' => array('items'=>NULL,'pager' => NULL,'sorting' => NULL,'tabs_html' => NULL,'wrap_prefix'=>NULL,'wrap_suffix'=>NULL,'no_records_text'=>NULL),
+    ),
+   
+  );
 }
