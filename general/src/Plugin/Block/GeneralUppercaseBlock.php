@@ -19,6 +19,9 @@ class GeneralUppercaseBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+  	//$form['#attached']['library'][] = 'general/general.search';
+    //$form['#attached']['library'][] = 'general/general.css';   
+
 	$result = db_select('node', 'n')
 	->fields('n', array(
 	'nid',
@@ -39,6 +42,11 @@ $build['article_list'] = array(
           //'#wrap_suffix' => $wrap_suffix,
           '#no_records_text' => 'No records found for your search',
           //'#cache' => array('max-age' => 0),
+		  '#attached' => array(
+				'library' => array(
+					'general/general.search','general/general.css'
+				),
+			),
       );
 return $build;
   /*  return [

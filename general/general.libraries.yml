@@ -1,0 +1,13 @@
+general.search:
+  js:
+    js/general.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    # Add css file.
+
+general.css:    
+  css:
+    module:
+      css/jquery.mCustomScrollbar.css: {}
