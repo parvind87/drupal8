@@ -5,4 +5,6 @@
 5. Getting the current page uri (Aliased Path)
 6. Implementation of hook_form_alter
 7. Creating Custom Block in Drupal 8 
+8. Attaching js/css file to custom block.
+9. Introduction of libraries.yml file.
 
