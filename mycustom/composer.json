@@ -1,0 +1,13 @@
+{
+    "name": "mycustom",
+    "type": "drupal-module",
+    "description": "My Custom Module, drupal customisations goes here",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/mycustom",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/mycustom",
+        "source": "http://cgit.drupalcode.org/mycustom",
+    },
+}

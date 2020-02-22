@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains article_queue.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function article_queue_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the article_queue module.
+    case 'help.page.article_queue':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Queue Demo') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function article_queue_theme() {
+  return [
+    'article_queue' => [
+      'render element' => 'children',
+    ],
+  ];
+}

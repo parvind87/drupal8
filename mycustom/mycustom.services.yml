@@ -1,0 +1,6 @@
+services:
+  mycustom.movies_manager:
+    class: Drupal\mycustom\MoviesManager
+    arguments: ['@database']
+    tags:
+      - { name: backend_overridable }

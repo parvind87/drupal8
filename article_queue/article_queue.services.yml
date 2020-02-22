@@ -1,0 +1,6 @@
+services:
+  article_queue.default:
+    class: Drupal\article_queue\EventSubscriber\DefaultSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

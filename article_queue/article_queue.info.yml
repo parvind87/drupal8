@@ -1,0 +1,5 @@
+name: 'article_queue'
+type: module
+description: 'Queue Demo'
+core: 8.x
+package: 'Custom'

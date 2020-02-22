@@ -1,0 +1,13 @@
+{
+    "name": "article_queue",
+    "type": "drupal-module",
+    "description": "Queue Demo",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/article_queue",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/article_queue",
+        "source": "http://cgit.drupalcode.org/article_queue",
+    },
+}
